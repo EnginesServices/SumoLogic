@@ -1,0 +1,78 @@
+---
+type_path: dockerstats
+publisher_namespace: SumoLogic
+accepts: []
+author: 
+title: docker_stats
+description: Docker statistics collector for engines
+major: 0
+minor: 0
+release_level: Alpha
+patch: 0
+service_container: dockerstats
+service_handle_field: dockerstats
+dedicated: false
+persistent: false
+immutable: false
+attach_post_build: false
+attach_requires_restart: false
+target_environment_variables: 
+consumer_params: {}
+type_consumer_params: {}
+configurators:
+  collector_credentials:
+    name: collector_credentials
+    label: collector_credentials
+    description: ''
+    no_save: false
+    params:
+      collector_name:
+        name: collector_name
+        value: docker_stats
+        label: collector_name
+        field_type: text
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: false
+      access_key:
+        name: access_key
+        value: access_key
+        label: access_key
+        field_type: text
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: true
+      access_id:
+        name: access_id
+        value: access_id
+        label: access_id
+        field_type: text
+        select_collection: ''
+        tooltip: ''
+        hint: ''
+        placeholder: ''
+        comment: ''
+        regex_validator: ''
+        regex_invalid_message: ''
+        mandatory: false
+        ask_at_build_time: false
+        build_time_only: false
+        immutable: true
+service_actionators: {}
+constants: {}
