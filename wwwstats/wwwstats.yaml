@@ -14,6 +14,21 @@ configurators:
   collector_credentials:
     name: collector_credentials
     label: Collector Credentials
+    variables:
+    - name: access_id
+      input:
+        label: Access ID
+        type: string
+    - name: access_key
+      mandatory: true
+      input:
+        label: Access key
+        type: string
+    - name: collector_name
+      input:
+        label: Collector name
+        type: string
+        title: Defaults to service name
 constants:
   collector_name:
     name: collector_name
