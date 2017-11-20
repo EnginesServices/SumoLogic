@@ -1,0 +1,34 @@
+---
+publisher_namespace: SumoLogic
+type_path: SumoLogic
+title: SumoLogic Syslog
+major: 0
+minor: 0
+release_level: alpha
+patch: 0
+service_container: syslog
+service_handle_field: parent_engine
+persistent: true
+configurators:
+  collector_credentials:
+    name: collector_credentials
+    label: Collector Credentials
+    enable_logging: true
+    variables:
+    - name: access_id
+      mandatory: true
+      input:
+        type: string
+    - name: access_key
+      mandatory: true
+      input:
+        type: string
+    - name: collector_name
+      input:
+        label: Collector Name
+        type: string
+        title: Defaults to service_name
+constants:
+  collector_name:
+    name: collector_name
+    value: syslog
