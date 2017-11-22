@@ -1,33 +1,80 @@
 ---
 publisher_namespace: SumoLogic
 type_path: SumoLogic
+accepts: []
 title: SumoLogic Syslog
+description: 
 major: 0
 minor: 0
 release_level: alpha
 patch: 0
 service_container: syslog
 service_handle_field: parent_engine
+dedicated: false
 persistent: true
+immutable: false
+attach_post_build: false
+attach_requires_restart: false
+soft_service: false
+target_environment_variables: 
+consumer_params: 
 configurators:
   collector_credentials:
     name: collector_credentials
     label: Collector Credentials
+    description: 
     enable_logging: true
+    no_save: false
     variables:
     - name: access_id
+      value: 
       mandatory: true
       input:
+        label: 
         type: string
+        title: 
+        comment: 
+        hint: 
+        placeholder: 
+        collection:
+          items: {}
+          include_blank: false
+        validation:
+          pattern: 
+          message: 
     - name: access_key
+      value: 
       mandatory: true
       input:
+        label: 
         type: string
+        title: 
+        comment: 
+        hint: 
+        placeholder: 
+        collection:
+          items: {}
+          include_blank: false
+        validation:
+          pattern: 
+          message: 
     - name: collector_name
+      value: 
+      mandatory: false
       input:
         label: Collector Name
         type: string
         title: Defaults to service_name
+        comment: 
+        hint: 
+        placeholder: 
+        collection:
+          items: {}
+          include_blank: false
+        validation:
+          pattern: 
+          message: 
+service_actionators: 
 constants:
   collector_name:
     name: collector_name
