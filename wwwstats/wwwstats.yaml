@@ -1,34 +1,80 @@
 ---
 publisher_namespace: SumoLogic
 type_path: wwwstats
+accepts: []
 title: SumoLogic WWW log analysis
+description: 
 major: 0
 minor: 0
 release_level: alpha
 patch: 0
 service_container: wwwstats
 service_handle_field: parent_engine
+dedicated: false
 persistent: true
+immutable: false
 attach_post_build: true
+attach_requires_restart: false
+soft_service: false
+target_environment_variables: 
+consumer_params: 
 configurators:
   collector_credentials:
     name: collector_credentials
     label: Collector Credentials
+    description: 
+    enable_logging: false
+    no_save: false
     variables:
     - name: access_id
+      value: 
+      mandatory: false
       input:
         label: Access ID
         type: string
+        title: 
+        comment: 
+        hint: 
+        placeholder: 
+        collection:
+          items: {}
+          include_blank: false
+        validation:
+          pattern: 
+          message: 
     - name: access_key
+      value: 
       mandatory: true
       input:
         label: Access key
         type: string
+        title: 
+        comment: 
+        hint: 
+        placeholder: 
+        collection:
+          items: {}
+          include_blank: false
+        validation:
+          pattern: 
+          message: 
     - name: collector_name
+      value: 
+      mandatory: false
       input:
         label: Collector name
         type: string
         title: Defaults to service name
+        comment: 
+        hint: 
+        placeholder: 
+        collection:
+          items: {}
+          include_blank: false
+        validation:
+          pattern: 
+          message: 
+service_actionators: 
 constants:
   collector_name:
     name: collector_name
