@@ -1,19 +1,19 @@
 ---
 publisher_namespace: SumoLogic
-type_path: wwwstats
+type_path: SumoLogic
 accepts: []
-title: SumoLogic WWW log analysis
+title: SumoLogic Syslog
 description: 
 major: 0
 minor: 0
 release_level: alpha
 patch: 0
-service_container: wwwstats
+service_container: syslog
 service_handle_field: parent_engine
 dedicated: false
 persistent: true
 immutable: false
-attach_post_build: true
+attach_post_build: false
 attach_requires_restart: false
 soft_service: false
 target_environment_variables: 
@@ -23,14 +23,14 @@ configurators:
     name: collector_credentials
     label: Collector Credentials
     description: 
-    enable_logging: false
+    enable_logging: true
     no_save: false
     variables:
     - name: access_id
       value: 
-      mandatory: false
+      mandatory: true
       input:
-        label: Access ID
+        label: 
         type: string
         title: 
         comment: 
@@ -46,7 +46,7 @@ configurators:
       value: 
       mandatory: true
       input:
-        label: Access key
+        label: 
         type: string
         title: 
         comment: 
@@ -62,9 +62,9 @@ configurators:
       value: 
       mandatory: false
       input:
-        label: Collector name
+        label: Collector Name
         type: string
-        title: Defaults to service name
+        title: Defaults to service_name
         comment: 
         hint: 
         placeholder: 
@@ -78,4 +78,4 @@ service_actionators:
 constants:
   collector_name:
     name: collector_name
-    value: www-logs
+    value: syslog
